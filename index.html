@@ -1,57 +1,271 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ایرجی اسمارت | هوشمندسازی ساختمان</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ایرجی اسمارت | هوشمندسازی ساختمان در اراک</title>
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  font-family: Tahoma, Arial, sans-serif;
-  background: #07111f;
-  color: #ffffff;
-  line-height: 1.9;
-}
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.9;
+    }
 
-header {
-  padding: 18px 7%;
-  background: #0b1728;
-  border-bottom: 1px solid #20334b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    header {
+      padding: 18px 7%;
+      background: #0b1728;
+      border-bottom: 1px solid #20334b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #27d3c2;
-}
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #27d3c2;
+    }
 
-nav a {
-  color: #dce6f2;
-  text-decoration: none;
-  margin-right: 18px;
-  font-size: 14px;
-}
+    nav a {
+      color: #dce6f2;
+      text-decoration: none;
+      margin-right: 18px;
+      font-size: 14px;
+    }
 
-.hero {
-  padding: 90px 7%;
-  text-align: center;
-  background:
-    radial-gradient(circle at top, #12304a, #07111f 65%);
-}
+    .hero {
+      padding: 90px 7%;
+      text-align: center;
+      background: radial-gradient(circle at top, #12304a, #07111f 65%);
+    }
 
-.hero .tag {
-  display: inline-block;
-  background: #102b39;
-  color: #27d3c2;
-  padding: 7px 15px;
-  border-radius: 30px;
-  margin-bottom: 20px
+    .tag {
+      display: inline-block;
+      background: #102b39;
+      color: #27d3c2;
+      padding: 7px 15px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: #c5d1df;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #27d3c2;
+      color: #061019;
+      padding: 12px 25px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 65px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #27d3c2;
+      font-size: 28px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #0d1b2d;
+      border: 1px solid #20334b;
+      border-radius: 18px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #aebdce;
+      font-size: 14px;
+    }
+
+    .about {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #c5d1df;
+    }
+
+    .contact {
+      text-align: center;
+      background: #0b1728;
+    }
+
+    .phone {
+      display: inline-block;
+      margin-top: 20px;
+      color: #27d3c2;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      direction: ltr;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8292a6;
+      font-size: 13px;
+      border-top: 1px solid #20334b;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+
+      .phone {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">ایرجی اسمارت</div>
+
+    <nav>
+      <a href="#services">خدمات</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="tag">هوشمندسازی ساختمان در اراک</div>
+
+    <h1>ساختمان شما، هوشمندتر از همیشه</h1>
+
+    <p>
+      ایرجی اسمارت با مدیریت محمد ایرجی،
+      ارائه‌دهنده راهکارهای هوشمندسازی ساختمان در شهر اراک.
+    </p>
+
+    <a class="button" href="#contact">تماس با ما</a>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">خدمات ما</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>روشنایی هوشمند</h3>
+        <p>
+          کنترل و مدیریت هوشمند روشنایی ساختمان
+          برای راحتی و مصرف بهینه انرژی.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>هوشمندسازی ساختمان</h3>
+        <p>
+          طراحی و اجرای راهکارهای هوشمند برای
+          کنترل و مدیریت بخش‌های مختلف ساختمان.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>امنیت و کنترل</h3>
+        <p>
+          راهکارهای هوشمند برای افزایش امنیت،
+          کنترل و نظارت بهتر بر ساختمان.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">درباره ما</h2>
+
+    <div class="about">
+      <p>
+        محمد ایرجی در زمینه هوشمندسازی ساختمان
+        در شهر اراک فعالیت می‌کند و خدمات و راهکارهای
+        هوشمند متناسب با نیاز ساختمان ارائه می‌دهد.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">تماس با ما</h2>
+
+    <p>برای دریافت اطلاعات بیشتر با ما تماس بگیرید.</p>
+
+    <a class="phone" href="tel:09183605130">
+      ۰۹۱۸۳۶۰۵۱۳۰
+    </a>
+  </section>
+
+  <footer>
+    © ۱۴۰۵ ایرجی اسمارت — هوشمندسازی ساختمان در اراک
+  </footer>
+
+</body>
+</html>

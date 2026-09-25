@@ -1,271 +1,398 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head> <meta name="google-site-verification" content="cadNkKMeU2aKKJa4ZUkPCdB4qM2fzHPOv8JY8JloCec" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ایرجی اسمارت | هوشمندسازی ساختمان در اراک</title> <meta name="description" content="محمد ایرجی، ارائه‌دهنده خدمات هوشمندسازی ساختمان در اراک؛ طراحی و اجرای روشنایی هوشمند، امنیت و کنترل ساختمان.">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <title>SmartHome | هوشمندسازی ساختمان در اراک</title>
 
-    body {
-      font-family: Tahoma, Arial, sans-serif;
-      background: #07111f;
-      color: #ffffff;
-      line-height: 1.9;
-    }
+    <meta name="description"
+          content="SmartHome ارائه‌دهنده خدمات هوشمندسازی ساختمان در اراک؛ روشنایی هوشمند، امنیت، دوربین، کنترل دما و تجهیزات هوشمند.">
 
-    header {
-      padding: 18px 7%;
-      background: #0b1728;
-      border-bottom: 1px solid #20334b;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
+    <!-- کد واقعی Google Search Console را از نسخه قبلی اینجا نگه دار -->
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #27d3c2;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    nav a {
-      color: #dce6f2;
-      text-decoration: none;
-      margin-right: 18px;
-      font-size: 14px;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .hero {
-      padding: 90px 7%;
-      text-align: center;
-      background: radial-gradient(circle at top, #12304a, #07111f 65%);
-    }
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #07111f;
+            color: #f5f7fa;
+            line-height: 1.9;
+        }
 
-    .tag {
-      display: inline-block;
-      background: #102b39;
-      color: #27d3c2;
-      padding: 7px 15px;
-      border-radius: 30px;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 18px;
-    }
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
 
-    .hero p {
-      max-width: 650px;
-      margin: 0 auto 28px;
-      color: #c5d1df;
-      font-size: 17px;
-    }
+        /* Header */
 
-    .button {
-      display: inline-block;
-      background: #27d3c2;
-      color: #061019;
-      padding: 12px 25px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7,17,31,.94);
+            border-bottom: 1px solid #20364d;
+            backdrop-filter: blur(12px);
+        }
 
-    section {
-      padding: 65px 7%;
-    }
+        .nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-    .section-title {
-      text-align: center;
-      color: #27d3c2;
-      font-size: 28px;
-      margin-bottom: 35px;
-    }
+        .brand {
+            font-size: 23px;
+            font-weight: bold;
+            color: #20d6c7;
+        }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+        .brand span {
+            color: white;
+        }
 
-    .card {
-      background: #0d1b2d;
-      border: 1px solid #20334b;
-      border-radius: 18px;
-      padding: 28px;
-      text-align: center;
-    }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 14px;
+        }
 
-    .card h3 {
-      color: #ffffff;
-      margin-bottom: 12px;
-    }
+        nav a {
+            color: #dce7ef;
+            transition: .2s;
+        }
 
-    .card p {
-      color: #aebdce;
-      font-size: 14px;
-    }
+        nav a:hover {
+            color: #20d6c7;
+        }
 
-    .about {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      color: #c5d1df;
-    }
+        /* Hero */
 
-    .contact {
-      text-align: center;
-      background: #0b1728;
-    }
+        .hero {
+            padding: 95px 0 85px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 0%, #164a65 0%, #0b2034 35%, #07111f 72%);
+        }
 
-    .phone {
-      display: inline-block;
-      margin-top: 20px;
-      color: #27d3c2;
-      font-size: 24px;
-      font-weight: bold;
-      text-decoration: none;
-      direction: ltr;
-    }
+        .badge {
+            display: inline-block;
+            padding: 6px 17px;
+            border: 1px solid #20d6c7;
+            border-radius: 30px;
+            color: #20d6c7;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #8292a6;
-      font-size: 13px;
-      border-top: 1px solid #20334b;
-    }
+        .hero h1 {
+            font-size: clamp(34px, 7vw, 62px);
+            line-height: 1.35;
+            margin-bottom: 18px;
+        }
 
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-      }
+        .hero h1 span {
+            color: #20d6c7;
+        }
 
-      nav a {
-        margin: 0 7px;
-      }
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #b9c8d6;
+            font-size: 17px;
+        }
 
-      .hero {
-        padding: 65px 6%;
-      }
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
-      .hero h1 {
-        font-size: 30px;
-      }
+        .btn {
+            padding: 12px 25px;
+            border-radius: 11px;
+            font-weight: bold;
+            display: inline-block;
+            transition: .2s;
+        }
 
-      .hero p {
-        font-size: 15px;
-      }
+        .btn:hover {
+            transform: translateY(-3px);
+        }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
+        .btn-primary {
+            background: #20d6c7;
+            color: #061018;
+        }
 
-      section {
-        padding: 50px 6%;
-      }
+        .btn-secondary {
+            border: 1px solid #45627b;
+            color: white;
+        }
 
-      .phone {
-        font-size: 20px;
-      }
-    }
-  </style>
-</head>
+        /* Sections */
 
-<body>
+        section {
+            padding: 80px 0;
+        }
 
-  <header>
-    <div class="logo">ایرجی اسمارت</div>
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
 
-    <nav>
-      <a href="#services">خدمات</a>
-      <a href="#about">درباره ما</a>
-      <a href="#contact">تماس</a>
-    </nav>
-  </header>
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
 
-  <section class="hero">
-    <div class="tag">هوشمندسازی ساختمان در اراک</div>
+        .section-title p {
+            color: #91a7ba;
+        }
 
-    <h1>ساختمان شما، هوشمندتر از همیشه</h1>
+        /* Services */
 
-    <p>
-      ایرجی اسمارت با مدیریت محمد ایرجی،
-      ارائه‌دهنده راهکارهای هوشمندسازی ساختمان در شهر اراک.
-    </p>
+        #services {
+            background: #081522;
+        }
 
-    <a class="button" href="#contact">تماس با ما</a>
-  </section>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
 
-  <section id="services">
-    <h2 class="section-title">خدمات ما</h2>
+        .service {
+            overflow: hidden;
+            border-radius: 19px;
+            border: 1px solid #243b50;
+            background: #0d1c2c;
+            transition: .25s;
+        }
 
-    <div class="cards">
+        .service:hover {
+            transform: translateY(-7px);
+            border-color: #20d6c7;
+        }
 
-      <div class="card">
-        <h3>روشنایی هوشمند</h3>
-        <p>
-          کنترل و مدیریت هوشمند روشنایی ساختمان
-          برای راحتی و مصرف بهینه انرژی.
-        </p>
-      </div>
+        .service-image {
+            height: 175px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 65px;
+        }
 
-      <div class="card">
-        <h3>هوشمندسازی ساختمان</h3>
-        <p>
-          طراحی و اجرای راهکارهای هوشمند برای
-          کنترل و مدیریت بخش‌های مختلف ساختمان.
-        </p>
-      </div>
+        .image-blue {
+            background: linear-gradient(135deg,#075985,#0ea5e9);
+        }
 
-      <div class="card">
-        <h3>امنیت و کنترل</h3>
-        <p>
-          راهکارهای هوشمند برای افزایش امنیت،
-          کنترل و نظارت بهتر بر ساختمان.
-        </p>
-      </div>
+        .image-green {
+            background: linear-gradient(135deg,#047857,#10b981);
+        }
 
-    </div>
-  </section>
+        .image-purple {
+            background: linear-gradient(135deg,#5b21b6,#8b5cf6);
+        }
 
-  <section id="about">
-    <h2 class="section-title">درباره ما</h2>
+        .image-orange {
+            background: linear-gradient(135deg,#c2410c,#f97316);
+        }
 
-    <div class="about">
-      <p>
-        محمد ایرجی در زمینه هوشمندسازی ساختمان
-        در شهر اراک فعالیت می‌کند و خدمات و راهکارهای
-        هوشمند متناسب با نیاز ساختمان ارائه می‌دهد.
-      </p>
-    </div>
-  </section>
+        .image-pink {
+            background: linear-gradient(135deg,#9d174d,#ec4899);
+        }
 
-  <section id="contact" class="contact">
-    <h2 class="section-title">تماس با ما</h2>
+        .image-cyan {
+            background: linear-gradient(135deg,#0e7490,#06b6d4);
+        }
 
-    <p>برای دریافت اطلاعات بیشتر با ما تماس بگیرید.</p>
+        .image-yellow {
+            background: linear-gradient(135deg,#a16207,#eab308);
+        }
 
-    <a class="phone" href="tel:09183605130">
-      ۰۹۱۸۳۶۰۵۱۳۰
-    </a>
-  </section>
+        .image-red {
+            background: linear-gradient(135deg,#991b1b,#ef4444);
+        }
 
-  <footer>
-    © ۱۴۰۵ ایرجی اسمارت — هوشمندسازی ساختمان در اراک
-  </footer>
+        .image-indigo {
+            background: linear-gradient(135deg,#3730a3,#6366f1);
+        }
 
-</body>
-</html>
+        .image-teal {
+            background: linear-gradient(135deg,#115e59,#14b8a6);
+        }
+
+        .service-content {
+            padding: 23px;
+        }
+
+        .service h3 {
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .service p {
+            color: #aebdca;
+            font-size: 14px;
+        }
+
+        /* Why */
+
+        #why {
+            background: #0a1827;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 18px;
+        }
+
+        .why-item {
+            padding: 23px;
+            background: #0e2032;
+            border-radius: 15px;
+            border-right: 4px solid #20d6c7;
+        }
+
+        .why-item h3 {
+            margin-bottom: 6px;
+        }
+
+        .why-item p {
+            color: #aebdca;
+            font-size: 14px;
+        }
+
+        /* Portfolio */
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .portfolio-card {
+            min-height: 190px;
+            padding: 30px;
+            border-radius: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            background: linear-gradient(145deg,#123b54,#102032);
+            border: 1px solid #28475e;
+        }
+
+        .portfolio-card:nth-child(2) {
+            background: linear-gradient(145deg,#24356c,#171d39);
+        }
+
+        .portfolio-card:nth-child(3) {
+            background: linear-gradient(145deg,#24533e,#10251e);
+        }
+
+        .portfolio-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .portfolio-card p {
+            color: #b6c7d5;
+            font-size: 14px;
+        }
+
+        /* About */
+
+        .about-box {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            background: #0d1c2c;
+            border: 1px solid #223d55;
+            padding: 38px;
+            border-radius: 20px;
+        }
+
+        .about-box p {
+            color: #b7c6d3;
+        }
+
+        /* FAQ */
+
+        .faq {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        details {
+            background: #0d1c2c;
+            border: 1px solid #223b52;
+            border-radius: 13px;
+            padding: 17px 20px;
+            margin-bottom: 12px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        details p {
+            color: #aebdca;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* Contact */
+
+        #contact {
+            background: linear-gradient(135deg,#092437,#101c35);
+        }
+
+        .contact-box {
+            text-align: center;
+            padding: 55px 20px;
+            border-radius: 23px;
+            border: 1px solid #28516a;
+        }
+
+        .contact-box p {
+            color: #b9c8d6;
+            margin-top: 8px;
+        }
+
+        .phone {
+            display: block;
+            margin: 22px 0;
+            color: #20d6c7;
+            font-size: 28px;
+            direction: ltr;
+        }
+
+        /* Footer */
+
+        footer {
+            padding
+
+
